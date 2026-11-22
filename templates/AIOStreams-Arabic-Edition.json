@@ -1,0 +1,2333 @@
+{
+  "metadata": {
+    "id": "arabic-edition.perfect-setup",
+    "name": "Streaming Perfect Setup · Arabic Edition",
+    "description": "Arabic edition of the numb3rs Streaming Perfect Setup template (based on v2.0.10, by Lucky Numb3rs, with TamTaro's SEL and Vidhin's regexes). Everything upstream is kept, plus an Arabic layer:\n* **Aradeb** (Arabic private trackers, up to one link per debrid service, duplicates merged) and **Disney Arabic Dub** in the same sorted list, never filtered out\n* Relaxed title/year/digital-release checks for **Arabic-original** titles only\n* Optional ranking for **Arabic dubs** and **Arabic hardsubs** on foreign titles\n* **SubDL / SubSource** Arabic subtitle addons\n* Optional **Usenet** from your own indexers, played through TorBox Pro\n* Debrid order TorBox → AllDebrid → Premiumize for duplicate cached results",
+    "source": "external",
+    "author": "Numb3rs AR Edition",
+    "version": "2026.1122.1844",
+    "category": "Full",
+    "serviceRequired": false,
+    "inputs": [
+      {
+        "__if": "!services",
+        "id": "header.p2p",
+        "name": "",
+        "description": "No services selected, only **🧲 P2P / 🌐 HTTP** setup.",
+        "type": "alert",
+        "intent": "warning"
+      },
+      {
+        "id": "header.streamTypes",
+        "name": "",
+        "description": "The following stream types are available: \n* **⚡ DEBRID** - Paid, but fast, safest and most reliable. Activated by selecting a service on the previous step. \n* **🧲 P2P** - Free, but slower and risky depending on the laws of your country. Activated automatically if you didn't select a Debrid service previously. \n* **🌐 HTTP** - Free, safe, but slower and less reliable than Debrid. Activated if you enable the *HTTP Addons* option below.",
+        "type": "alert",
+        "intent": "info-basic"
+      },
+      {
+        "id": "header.formatter",
+        "name": "🎨 Formatter Options",
+        "description": "",
+        "type": "alert",
+        "intent": "info"
+      },
+      {
+        "id": "formatterChoice",
+        "name": "🖋️ Formatter Style",
+        "description": "Choose the formatting of the stream information view (more details [here](https://numb3rs.stream/guide/7-Additional-Stuff/#understanding-stream-information-view)): \n* ▶︎ **Flat Monochrome Icons** has a cleaner look based on minimalistic white icons. \n* 🎬 **Colorful Icons** contains a colored version with more graphical icons.",
+        "type": "select",
+        "required": false,
+        "default": "flat",
+        "options": [
+          {
+            "value": "flat",
+            "label": "▶︎ Flat Monochrome Icons"
+          },
+          {
+            "value": "color",
+            "label": "🎬 Colorful Icons"
+          }
+        ]
+      },
+      {
+        "id": "formatterFilename",
+        "name": "📝 Show Filename",
+        "description": "If enabled, the filenames will also be displayed on the stream information view.",
+        "type": "boolean",
+        "required": false,
+        "default": false
+      },
+      {
+        "id": "header.languages",
+        "name": "🗣️ Language Options",
+        "description": "",
+        "type": "alert",
+        "intent": "info"
+      },
+      {
+        "id": "languages",
+        "name": "🔊 Preferred Languages",
+        "description": "Select your preferred stream languages that you want to be sorted first when the streaming options are shown. *Original, Dual Audio, Multi, Dubbed, and Unknown* are automatically appended after your selections. Fine-tune the full order in **Filters → Language** after import if you want. *Arabic edition: Arabic and English are preselected. Arabic first means an Arabic-audio release wins a tie against an otherwise identical English one.*",
+        "type": "multi-select",
+        "required": false,
+        "default": [
+          "Arabic",
+          "English"
+        ],
+        "options": [
+          {
+            "value": "Arabic",
+            "label": "🇸🇦 Arabic"
+          },
+          {
+            "value": "Bengali",
+            "label": "🇧🇩 Bengali"
+          },
+          {
+            "value": "Bulgarian",
+            "label": "🇧🇬 Bulgarian"
+          },
+          {
+            "value": "Chinese",
+            "label": "🇨🇳 Chinese"
+          },
+          {
+            "value": "Croatian",
+            "label": "🇭🇷 Croatian"
+          },
+          {
+            "value": "Czech",
+            "label": "🇨🇿 Czech"
+          },
+          {
+            "value": "Danish",
+            "label": "🇩🇰 Danish"
+          },
+          {
+            "value": "Dutch",
+            "label": "🇳🇱 Dutch"
+          },
+          {
+            "value": "English",
+            "label": "🇬🇧 English"
+          },
+          {
+            "value": "Estonian",
+            "label": "🇪🇪 Estonian"
+          },
+          {
+            "value": "Finnish",
+            "label": "🇫🇮 Finnish"
+          },
+          {
+            "value": "French",
+            "label": "🇫🇷 French"
+          },
+          {
+            "value": "German",
+            "label": "🇩🇪 German"
+          },
+          {
+            "value": "Greek",
+            "label": "🇬🇷 Greek"
+          },
+          {
+            "value": "Gujarati",
+            "label": "🇮🇳 Gujarati"
+          },
+          {
+            "value": "Hebrew",
+            "label": "🇮🇱 Hebrew"
+          },
+          {
+            "value": "Hindi",
+            "label": "🇮🇳 Hindi"
+          },
+          {
+            "value": "Hungarian",
+            "label": "🇭🇺 Hungarian"
+          },
+          {
+            "value": "Indonesian",
+            "label": "🇮🇩 Indonesian"
+          },
+          {
+            "value": "Italian",
+            "label": "🇮🇹 Italian"
+          },
+          {
+            "value": "Japanese",
+            "label": "🇯🇵 Japanese"
+          },
+          {
+            "value": "Kannada",
+            "label": "🇮🇳 Kannada"
+          },
+          {
+            "value": "Korean",
+            "label": "🇰🇷 Korean"
+          },
+          {
+            "value": "Latino",
+            "label": "🇲🇽 Latino"
+          },
+          {
+            "value": "Latvian",
+            "label": "🇱🇻 Latvian"
+          },
+          {
+            "value": "Lithuanian",
+            "label": "🇱🇹 Lithuanian"
+          },
+          {
+            "value": "Malayalam",
+            "label": "🇮🇳 Malayalam"
+          },
+          {
+            "value": "Malay",
+            "label": "🇲🇾 Malay"
+          },
+          {
+            "value": "Marathi",
+            "label": "🇮🇳 Marathi"
+          },
+          {
+            "value": "Norwegian",
+            "label": "🇳🇴 Norwegian"
+          },
+          {
+            "value": "Persian",
+            "label": "🇮🇷 Persian"
+          },
+          {
+            "value": "Polish",
+            "label": "🇵🇱 Polish"
+          },
+          {
+            "value": "Portuguese",
+            "label": "🇵🇹 Portuguese"
+          },
+          {
+            "value": "Punjabi",
+            "label": "🇮🇳 Punjabi"
+          },
+          {
+            "value": "Romanian",
+            "label": "🇷🇴 Romanian"
+          },
+          {
+            "value": "Russian",
+            "label": "🇷🇺 Russian"
+          },
+          {
+            "value": "Serbian",
+            "label": "🇷🇸 Serbian"
+          },
+          {
+            "value": "Slovak",
+            "label": "🇸🇰 Slovak"
+          },
+          {
+            "value": "Slovenian",
+            "label": "🇸🇮 Slovenian"
+          },
+          {
+            "value": "Spanish",
+            "label": "🇪🇸 Spanish"
+          },
+          {
+            "value": "Swedish",
+            "label": "🇸🇪 Swedish"
+          },
+          {
+            "value": "Tamil",
+            "label": "🇮🇳 Tamil"
+          },
+          {
+            "value": "Telugu",
+            "label": "🇮🇳 Telugu"
+          },
+          {
+            "value": "Thai",
+            "label": "🇹🇭 Thai"
+          },
+          {
+            "value": "Turkish",
+            "label": "🇹🇷 Turkish"
+          },
+          {
+            "value": "Ukrainian",
+            "label": "🇺🇦 Ukrainian"
+          },
+          {
+            "value": "Vietnamese",
+            "label": "🇻🇳 Vietnamese"
+          }
+        ]
+      },
+      {
+        "id": "languagesRequired",
+        "name": "🔒 Show Only Preferred Languages",
+        "description": "If enabled (recommended), only streams in the selected languages above will be shown (including *Original, Dual Audio, Multi, Dubbed, and Unknown*). This can help reduce clutter by filtering out streams in languages you don't prefer.",
+        "type": "boolean",
+        "required": false,
+        "default": true
+      },
+      {
+        "id": "subtitles",
+        "name": "💬 Preferred Subtitles",
+        "description": "Select the subtitles that should be loaded when opening a stream. Change them in **Addons → OpenSubtitles V3 Pro** after import if you want.",
+        "type": "multi-select",
+        "required": false,
+        "default": [
+          "ar",
+          "en"
+        ],
+        "options": [
+          {
+            "value": "ab",
+            "label": "🇬🇪 Abkhazian"
+          },
+          {
+            "value": "af",
+            "label": "🇿🇦 Afrikaans"
+          },
+          {
+            "value": "sq",
+            "label": "🇦🇱 Albanian"
+          },
+          {
+            "value": "ar",
+            "label": "🇸🇦 Arabic"
+          },
+          {
+            "value": "an",
+            "label": "🇪🇸 Aragonese"
+          },
+          {
+            "value": "hy",
+            "label": "🇦🇲 Armenian"
+          },
+          {
+            "value": "as",
+            "label": "🇮🇳 Assamese"
+          },
+          {
+            "value": "at",
+            "label": "🇪🇸 Asturian"
+          },
+          {
+            "value": "az",
+            "label": "🇦🇿 Azerbaijani"
+          },
+          {
+            "value": "eu",
+            "label": "🇪🇸 Basque"
+          },
+          {
+            "value": "be",
+            "label": "🇧🇾 Belarusian"
+          },
+          {
+            "value": "bn",
+            "label": "🇧🇩 Bengali"
+          },
+          {
+            "value": "bs",
+            "label": "🇧🇦 Bosnian"
+          },
+          {
+            "value": "br",
+            "label": "🇫🇷 Breton"
+          },
+          {
+            "value": "bg",
+            "label": "🇧🇬 Bulgarian"
+          },
+          {
+            "value": "my",
+            "label": "🇲🇲 Burmese"
+          },
+          {
+            "value": "ca",
+            "label": "🇪🇸 Catalan"
+          },
+          {
+            "value": "ze",
+            "label": "🇨🇳 Chinese (Bilingual)"
+          },
+          {
+            "value": "zh-cn",
+            "label": "🇨🇳 Chinese (Simplified)"
+          },
+          {
+            "value": "zh-tw",
+            "label": "🇹🇼 Chinese (Traditional)"
+          },
+          {
+            "value": "hr",
+            "label": "🇭🇷 Croatian"
+          },
+          {
+            "value": "cs",
+            "label": "🇨🇿 Czech"
+          },
+          {
+            "value": "da",
+            "label": "🇩🇰 Danish"
+          },
+          {
+            "value": "pr",
+            "label": "🇦🇫 Dari"
+          },
+          {
+            "value": "nl",
+            "label": "🇳🇱 Dutch"
+          },
+          {
+            "value": "en",
+            "label": "🇬🇧 English"
+          },
+          {
+            "value": "eo",
+            "label": "🇪🇺 Esperanto"
+          },
+          {
+            "value": "et",
+            "label": "🇪🇪 Estonian"
+          },
+          {
+            "value": "ex",
+            "label": "🇪🇸 Extremaduran"
+          },
+          {
+            "value": "fa",
+            "label": "🇮🇷 Persian"
+          },
+          {
+            "value": "fi",
+            "label": "🇫🇮 Finnish"
+          },
+          {
+            "value": "fr",
+            "label": "🇫🇷 French"
+          },
+          {
+            "value": "gd",
+            "label": "🇬🇧 Gaelic"
+          },
+          {
+            "value": "gl",
+            "label": "🇪🇸 Galician"
+          },
+          {
+            "value": "ka",
+            "label": "🇬🇪 Georgian"
+          },
+          {
+            "value": "de",
+            "label": "🇩🇪 German"
+          },
+          {
+            "value": "el",
+            "label": "🇬🇷 Greek"
+          },
+          {
+            "value": "he",
+            "label": "🇮🇱 Hebrew"
+          },
+          {
+            "value": "hi",
+            "label": "🇮🇳 Hindi"
+          },
+          {
+            "value": "hu",
+            "label": "🇭🇺 Hungarian"
+          },
+          {
+            "value": "is",
+            "label": "🇮🇸 Icelandic"
+          },
+          {
+            "value": "ig",
+            "label": "🇳🇬 Igbo"
+          },
+          {
+            "value": "id",
+            "label": "🇮🇩 Indonesian"
+          },
+          {
+            "value": "ia",
+            "label": "🇪🇺 Interlingua"
+          },
+          {
+            "value": "ga",
+            "label": "🇮🇪 Irish"
+          },
+          {
+            "value": "it",
+            "label": "🇮🇹 Italian"
+          },
+          {
+            "value": "ja",
+            "label": "🇯🇵 Japanese"
+          },
+          {
+            "value": "kk",
+            "label": "🇰🇿 Kazakh"
+          },
+          {
+            "value": "km",
+            "label": "🇰🇭 Khmer"
+          },
+          {
+            "value": "kn",
+            "label": "🇮🇳 Kannada"
+          },
+          {
+            "value": "ko",
+            "label": "🇰🇷 Korean"
+          },
+          {
+            "value": "ku",
+            "label": "🇮🇶 Kurdish"
+          },
+          {
+            "value": "lv",
+            "label": "🇱🇻 Latvian"
+          },
+          {
+            "value": "lt",
+            "label": "🇱🇹 Lithuanian"
+          },
+          {
+            "value": "lb",
+            "label": "🇱🇺 Luxembourgish"
+          },
+          {
+            "value": "mk",
+            "label": "🇲🇰 Macedonian"
+          },
+          {
+            "value": "ms",
+            "label": "🇲🇾 Malay"
+          },
+          {
+            "value": "ml",
+            "label": "🇮🇳 Malayalam"
+          },
+          {
+            "value": "ma",
+            "label": "🇮🇳 Manipuri"
+          },
+          {
+            "value": "mr",
+            "label": "🇮🇳 Marathi"
+          },
+          {
+            "value": "me",
+            "label": "🇲🇪 Montenegrin"
+          },
+          {
+            "value": "mn",
+            "label": "🇲🇳 Mongolian"
+          },
+          {
+            "value": "nv",
+            "label": "🇺🇸 Navajo"
+          },
+          {
+            "value": "ne",
+            "label": "🇳🇵 Nepali"
+          },
+          {
+            "value": "se",
+            "label": "🇳🇴 Northern Sami"
+          },
+          {
+            "value": "no",
+            "label": "🇳🇴 Norwegian"
+          },
+          {
+            "value": "oc",
+            "label": "🇫🇷 Occitan"
+          },
+          {
+            "value": "or",
+            "label": "🇮🇳 Odia"
+          },
+          {
+            "value": "pl",
+            "label": "🇵🇱 Polish"
+          },
+          {
+            "value": "pt-pt",
+            "label": "🇵🇹 Portuguese"
+          },
+          {
+            "value": "pt-br",
+            "label": "🇧🇷 Portuguese (BR)"
+          },
+          {
+            "value": "pm",
+            "label": "🇲🇿 Portuguese (MZ)"
+          },
+          {
+            "value": "ps",
+            "label": "🇦🇫 Pushto"
+          },
+          {
+            "value": "ro",
+            "label": "🇷🇴 Romanian"
+          },
+          {
+            "value": "ru",
+            "label": "🇷🇺 Russian"
+          },
+          {
+            "value": "sx",
+            "label": "🇮🇳 Santali"
+          },
+          {
+            "value": "sr",
+            "label": "🇷🇸 Serbian"
+          },
+          {
+            "value": "sd",
+            "label": "🇵🇰 Sindhi"
+          },
+          {
+            "value": "si",
+            "label": "🇱🇰 Sinhalese"
+          },
+          {
+            "value": "sk",
+            "label": "🇸🇰 Slovak"
+          },
+          {
+            "value": "sl",
+            "label": "🇸🇮 Slovenian"
+          },
+          {
+            "value": "so",
+            "label": "🇸🇴 Somali"
+          },
+          {
+            "value": "es",
+            "label": "🇪🇸 Spanish"
+          },
+          {
+            "value": "sp",
+            "label": "🇪🇸 Spanish (EU)"
+          },
+          {
+            "value": "ea",
+            "label": "🇲🇽 Spanish (Latin)"
+          },
+          {
+            "value": "sw",
+            "label": "🇹🇿 Swahili"
+          },
+          {
+            "value": "sv",
+            "label": "🇸🇪 Swedish"
+          },
+          {
+            "value": "sy",
+            "label": "🇸🇾 Syriac"
+          },
+          {
+            "value": "tl",
+            "label": "🇵🇭 Tagalog"
+          },
+          {
+            "value": "ta",
+            "label": "🇮🇳 Tamil"
+          },
+          {
+            "value": "tt",
+            "label": "🇷🇺 Tatar"
+          },
+          {
+            "value": "te",
+            "label": "🇮🇳 Telugu"
+          },
+          {
+            "value": "th",
+            "label": "🇹🇭 Thai"
+          },
+          {
+            "value": "tp",
+            "label": "🇨🇦 Toki Pona"
+          },
+          {
+            "value": "tr",
+            "label": "🇹🇷 Turkish"
+          },
+          {
+            "value": "tk",
+            "label": "🇹🇲 Turkmen"
+          },
+          {
+            "value": "uk",
+            "label": "🇺🇦 Ukrainian"
+          },
+          {
+            "value": "ur",
+            "label": "🇵🇰 Urdu"
+          },
+          {
+            "value": "uz",
+            "label": "🇺🇿 Uzbek"
+          },
+          {
+            "value": "vi",
+            "label": "🇻🇳 Vietnamese"
+          },
+          {
+            "value": "cy",
+            "label": "🇬🇧 Welsh"
+          }
+        ]
+      },
+      {
+        "id": "subdl",
+        "name": "SubDL Subtitles",
+        "description": "Adds the **SubDL** subtitles addon (Arabic + English), one of the largest Arabic subtitle libraries. Needs a free API key from [subdl.com/panel/api](https://subdl.com/panel/api). Edit its languages later in **Addons → SubDL**.",
+        "type": "boolean",
+        "required": false,
+        "default": false
+      },
+      {
+        "__if": "inputs.subdl",
+        "id": "subdlApiKey",
+        "name": "SubDL API Key",
+        "description": "Your SubDL API key from [subdl.com/panel/api](https://subdl.com/panel/api).",
+        "type": "password",
+        "required": true
+      },
+      {
+        "id": "subsource",
+        "name": "SubSource Subtitles",
+        "description": "Adds the **SubSource** subtitles addon (Arabic + English), another large Arabic subtitle library. Needs a free API key from your [SubSource profile](https://subsource.net/dashboard/profile).",
+        "type": "boolean",
+        "required": false,
+        "default": false
+      },
+      {
+        "__if": "inputs.subsource",
+        "id": "subsourceApiKey",
+        "name": "SubSource API Key",
+        "description": "Your SubSource API key from [subsource.net/dashboard/profile](https://subsource.net/dashboard/profile).",
+        "type": "password",
+        "required": true
+      },
+      {
+        "id": "header.arabic",
+        "name": "Arabic Options",
+        "description": "",
+        "type": "alert",
+        "intent": "info"
+      },
+      {
+        "id": "arabicInfo",
+        "name": "",
+        "description": "These options add the Arabic layer on top of the numb3rs setup. The defaults are the recommended setup; the companion guide explains each one.",
+        "type": "alert",
+        "intent": "info-basic"
+      },
+      {
+        "id": "aradeb",
+        "name": "Aradeb (Arabic Private Trackers)",
+        "description": "Adds **Aradeb** inside AIOStreams so its Arabic results are merged, sorted and formatted with everything else. Aradeb plays through the debrid service set **in each Aradeb configuration** (Aradeb 2.0 allows one per configuration), not the services you pick here. Its results skip every filter in this template, because Arabic release names often fail the normal title and language checks; only duplicates of the same release are merged. Keep the addon name **Aradeb**: the filter bypass looks for that name.",
+        "type": "boolean",
+        "required": false,
+        "default": true
+      },
+      {
+        "__if": "inputs.aradeb",
+        "id": "aradebUrl",
+        "name": "Aradeb Manifest URL",
+        "description": "The **Full manifest URL** of your Aradeb configuration for TorBox (aradeb.518878.xyz → Install, ends in **/manifest.json**). Recommended Aradeb settings for this one: Enhanced metadata **off**, Search **on**, Catalogs **Clear all**, so AIOStreams brings Aradeb's Arabic search and nothing else besides streams. The link can play through your debrid account, so keep it private.",
+        "type": "url",
+        "required": true
+      },
+      {
+        "__if": "inputs.aradeb",
+        "id": "aradebUrl2",
+        "name": "Second Aradeb Manifest URL (optional)",
+        "description": "Aradeb allows one debrid service per configuration, so make one configuration per service and paste the AllDebrid one here to check that service's cache too. Extra links are asked for streams only, whatever rows the configuration has. When AIOStreams sees the same release from two links it keeps one: a cached copy beats an uncached one, and when both are cached the copy from the service higher in **Services** wins.",
+        "type": "url",
+        "required": false
+      },
+      {
+        "__if": "inputs.aradeb",
+        "id": "aradebUrl3",
+        "name": "Third Aradeb Manifest URL (optional)",
+        "description": "The Aradeb configuration for a third debrid service (for example Premiumize). Turn everything off in it except the debrid service: it is only asked for streams.",
+        "type": "url",
+        "required": false
+      },
+      {
+        "__if": "inputs.aradeb",
+        "id": "aradebMode",
+        "name": "Aradeb Resources",
+        "description": "* **Streams + Aradeb search** (recommended): AIOStreams also serves whatever catalogs the main Aradeb configuration has on. With its rows cleared in Aradeb, that is just Aradeb's Arabic and Latin title search.\n* **Streams only**: AIOStreams only asks Aradeb for streams.",
+        "type": "select",
+        "required": false,
+        "default": "full",
+        "options": [
+          {
+            "value": "full",
+            "label": "Streams + Aradeb search"
+          },
+          {
+            "value": "streams",
+            "label": "Streams only"
+          }
+        ]
+      },
+      {
+        "__if": "inputs.aradeb",
+        "id": "aradebPosition",
+        "name": "Aradeb Position",
+        "description": "* **Sorted with everything** (recommended): Aradeb results compete on resolution, quality and score like any other source.\n* **Pinned on top**: Aradeb results always come first. Aradeb also answers for many foreign titles (often Arabic-hardsubbed), so pinning pushes those above better international releases.",
+        "type": "select",
+        "required": false,
+        "default": "none",
+        "options": [
+          {
+            "value": "none",
+            "label": "Sorted with everything"
+          },
+          {
+            "value": "top",
+            "label": "Always pinned on top"
+          }
+        ]
+      },
+      {
+        "__if": "inputs.aradeb",
+        "id": "aradebTimeout",
+        "name": "Aradeb Timeout",
+        "description": "Time in ms to wait for Aradeb, which searches private trackers and can be slower than the other scrapers. AIOStreams waits for the slowest addon, so a higher value can make every result list slower.",
+        "type": "number",
+        "required": false,
+        "default": 8000
+      },
+      {
+        "id": "disneyDub",
+        "name": "Disney Arabic Dub",
+        "description": "Adds the **Disney Arabic Dub** addon's streams (Arabic and Egyptian dubs of Disney films) for movies. Like Aradeb, its results skip every filter. It runs on a free server that sleeps when idle, so the first request after a quiet spell can time out; the next one works.",
+        "type": "boolean",
+        "required": false,
+        "default": true
+      },
+      {
+        "__if": "inputs.disneyDub",
+        "id": "disneyDubUrl",
+        "name": "Disney Arabic Dub Manifest URL",
+        "description": "The addon's manifest link. The public one is pre-filled.",
+        "type": "url",
+        "required": true,
+        "default": "https://disney-arabic-dub.onrender.com/manifest.json"
+      },
+      {
+        "__if": "inputs.disneyDub",
+        "id": "disneyDubCatalog",
+        "name": "Disney Arabic Dub Catalog",
+        "description": "* **Streams only** (recommended): its Disney titles also appear in Aradeb's Arabic Dubbed Movies row, so no separate row is needed.\n* **Streams + catalog row**: AIOStreams also shows its *Disney (Arabic Dub)* row.\nIts metadata is never used: the addon claims metadata for every movie, which would override your metadata addon.",
+        "type": "select",
+        "required": false,
+        "default": "streams",
+        "options": [
+          {
+            "value": "streams",
+            "label": "Streams only"
+          },
+          {
+            "value": "catalog",
+            "label": "Streams + catalog row"
+          }
+        ]
+      },
+      {
+        "id": "arabicOriginals",
+        "name": "Relax Checks for Arabic Originals",
+        "description": "For titles whose original language is Arabic, results from ID-based scrapers skip the **title**, **year** and **digital release** checks. Arabic releases are named with transliterations (*El*, *Al*, *Wa*...) that rarely match TMDB exactly, and TMDB seldom lists digital release dates for Arab films, so these checks drop valid releases. All other filters still apply. Non-Arabic titles are unaffected.",
+        "type": "boolean",
+        "required": false,
+        "default": true
+      },
+      {
+        "id": "arabicDubs",
+        "name": "Arabic-Dubbed Releases",
+        "description": "How to rank Arabic-dubbed releases of **non-Arabic** titles (detected from Arabic audio tags or words like *Arabic Dubbed* / *مدبلج*). Applies after resolution and quality.\n* **Neutral**: no change.\n* **Prefer**: dubbed releases move up within the same resolution and quality.\n* **Avoid**: dubbed releases move down, and are hidden when 10 or more better-scored results exist.",
+        "type": "select",
+        "required": false,
+        "default": "neutral",
+        "options": [
+          {
+            "value": "neutral",
+            "label": "Neutral"
+          },
+          {
+            "value": "prefer",
+            "label": "Prefer"
+          },
+          {
+            "value": "avoid",
+            "label": "Avoid"
+          }
+        ]
+      },
+      {
+        "id": "arabicHardsubs",
+        "name": "Arabic Hardsub Releases",
+        "description": "How to rank releases of **non-Arabic** titles with Arabic subtitles burned into the picture (words like *Arabic Sub* / *مترجم*). These are usually small re-encodes; with Arabic soft subtitles from OpenSubtitles, SubDL or SubSource you rarely need them.\n* **Neutral**: no change.\n* **Prefer**: move up within the same resolution and quality.\n* **Avoid**: move down, hidden when 10 or more better-scored results exist.\n* **Exclude**: always hidden (Aradeb results excepted).",
+        "type": "select",
+        "required": false,
+        "default": "avoid",
+        "options": [
+          {
+            "value": "neutral",
+            "label": "Neutral"
+          },
+          {
+            "value": "prefer",
+            "label": "Prefer"
+          },
+          {
+            "value": "avoid",
+            "label": "Avoid"
+          },
+          {
+            "value": "exclude",
+            "label": "Exclude"
+          }
+        ]
+      },
+      {
+        "id": "header.addons",
+        "name": "🧩 Addon Options",
+        "description": "",
+        "type": "alert",
+        "intent": "info"
+      },
+      {
+        "__if": "services",
+        "id": "anime",
+        "name": "🗡️ Anime Addons",
+        "description": "If enabled, additional anime-specific addons (**SeaDex, AnimeTosho**) will be installed.",
+        "type": "boolean",
+        "required": false,
+        "default": false
+      },
+      {
+        "__if": "services",
+        "id": "debridio",
+        "name": "🧊 Debridio",
+        "description": "If enabled, [Debridio Scraper](https://debridio.com) will be added. You will need your *Debridio API key* from your account settings. Leave it disabled if you don't know what this is.",
+        "type": "boolean",
+        "required": false,
+        "default": false
+      },
+      {
+        "__if": "inputs.debridio",
+        "id": "debridioApiKey",
+        "name": "Debridio API Key",
+        "description": "Paste your Debridio API key, found in your Debridio [account settings](https://debridio.com/account).",
+        "type": "password",
+        "required": true
+      },
+      {
+        "__if": "services.torbox",
+        "id": "usenet",
+        "name": "Usenet through TorBox Pro",
+        "description": "Adds Usenet results from **your own indexer** (a paid NZB indexer account such as NZBgeek or NZBFinder), played through TorBox. Needs a TorBox **Pro** plan.\n* Results show as uncached; pressing play downloads the file to TorBox and starts it when ready, usually after a short wait.\n* Some indexers forbid this use, because the search comes from this AIOStreams server and the download from TorBox (two different IPs). Treasure Maps (formerly SceneNZBs) does; check your indexer's rules.",
+        "type": "boolean",
+        "required": false,
+        "default": false
+      },
+      {
+        "__if": "inputs.usenet",
+        "id": "usenetIndexer",
+        "name": "Usenet Indexer",
+        "description": "Your Newznab indexer and its API key.",
+        "type": "nab-endpoint",
+        "nab": {
+          "namespace": "newznab",
+          "preset": "newznab"
+        },
+        "required": true,
+        "subOptions": [
+          {
+            "id": "url",
+            "name": "Indexer",
+            "description": "Pick your indexer, or choose Custom and paste its Newznab API URL (usually ending in /api).",
+            "type": "select-with-custom",
+            "required": true,
+            "options": [
+              {
+                "label": "abNZB",
+                "value": "https://abnzb.com/api"
+              },
+              {
+                "label": "altHUB",
+                "value": "https://api.althub.co.za/api"
+              },
+              {
+                "label": "AmeNZB",
+                "value": "https://amenzb.moe/api"
+              },
+              {
+                "label": "Anime Tosho",
+                "value": "https://feed.animetosho.net/api"
+              },
+              {
+                "label": "Aninzb",
+                "value": "https://aninzb.moe/api"
+              },
+              {
+                "label": "ClubNZB",
+                "value": "https://clubnzb.com/api"
+              },
+              {
+                "label": "Digital Carnage",
+                "value": "https://digitalcarnage.info/api"
+              },
+              {
+                "label": "DOGnzb",
+                "value": "https://api.dognzb.cr/api"
+              },
+              {
+                "label": "DrunkenSlug",
+                "value": "https://drunkenslug.com/api"
+              },
+              {
+                "label": "GingaDADDY",
+                "value": "https://www.gingadaddy.com/api"
+              },
+              {
+                "label": "Miatrix",
+                "value": "https://www.miatrix.com/api"
+              },
+              {
+                "label": "NewzBay",
+                "value": "https://newzbay.cc/api"
+              },
+              {
+                "label": "NinjaCentral",
+                "value": "https://ninjacentral.co.za/api"
+              },
+              {
+                "label": "NZB Atlas",
+                "value": "https://nzbatlas.com/api"
+              },
+              {
+                "label": "Nzb.life",
+                "value": "https://api.nzb.life/api"
+              },
+              {
+                "label": "NZBFinder",
+                "value": "https://nzbfinder.ws/api"
+              },
+              {
+                "label": "NZBgeek",
+                "value": "https://api.nzbgeek.info/api"
+              },
+              {
+                "label": "NzbNest",
+                "value": "https://nzbnest.com/api"
+              },
+              {
+                "label": "NzbNoob",
+                "value": "https://nzbnoob.com/api"
+              },
+              {
+                "label": "NzbPlanet",
+                "value": "https://api.nzbplanet.net/api"
+              },
+              {
+                "label": "NZBStars",
+                "value": "https://nzbstars.com/api"
+              },
+              {
+                "label": "PourCeSoir",
+                "value": "https://pourcesoir.in/api"
+              },
+              {
+                "label": "SearchNZB",
+                "value": "https://api.searchnzb.com/api"
+              },
+              {
+                "label": "SquareEyed",
+                "value": "https://squareeyed.org/api"
+              },
+              {
+                "label": "Tabula Rasa",
+                "value": "https://www.tabula-rasa.pw/api/v1/api"
+              },
+              {
+                "label": "Usenet Crawler",
+                "value": "https://www.usenet-crawler.com/api"
+              },
+              {
+                "label": "Videothek",
+                "value": "https://videothek.io/api"
+              }
+            ]
+          },
+          {
+            "id": "apiKey",
+            "name": "API Key",
+            "description": "The API key from your indexer profile page.",
+            "type": "password",
+            "required": false
+          }
+        ]
+      },
+      {
+        "__if": "inputs.usenet",
+        "id": "usenetIndexer2",
+        "name": "Second Usenet Indexer (optional)",
+        "description": "Another indexer, if you have one. Leave the indexer empty to skip it.",
+        "type": "nab-endpoint",
+        "nab": {
+          "namespace": "newznab",
+          "preset": "newznab"
+        },
+        "required": false,
+        "subOptions": [
+          {
+            "id": "url",
+            "name": "Indexer",
+            "description": "Pick your indexer, or choose Custom and paste its Newznab API URL (usually ending in /api).",
+            "type": "select-with-custom",
+            "required": false,
+            "options": [
+              {
+                "label": "abNZB",
+                "value": "https://abnzb.com/api"
+              },
+              {
+                "label": "altHUB",
+                "value": "https://api.althub.co.za/api"
+              },
+              {
+                "label": "AmeNZB",
+                "value": "https://amenzb.moe/api"
+              },
+              {
+                "label": "Anime Tosho",
+                "value": "https://feed.animetosho.net/api"
+              },
+              {
+                "label": "Aninzb",
+                "value": "https://aninzb.moe/api"
+              },
+              {
+                "label": "ClubNZB",
+                "value": "https://clubnzb.com/api"
+              },
+              {
+                "label": "Digital Carnage",
+                "value": "https://digitalcarnage.info/api"
+              },
+              {
+                "label": "DOGnzb",
+                "value": "https://api.dognzb.cr/api"
+              },
+              {
+                "label": "DrunkenSlug",
+                "value": "https://drunkenslug.com/api"
+              },
+              {
+                "label": "GingaDADDY",
+                "value": "https://www.gingadaddy.com/api"
+              },
+              {
+                "label": "Miatrix",
+                "value": "https://www.miatrix.com/api"
+              },
+              {
+                "label": "NewzBay",
+                "value": "https://newzbay.cc/api"
+              },
+              {
+                "label": "NinjaCentral",
+                "value": "https://ninjacentral.co.za/api"
+              },
+              {
+                "label": "NZB Atlas",
+                "value": "https://nzbatlas.com/api"
+              },
+              {
+                "label": "Nzb.life",
+                "value": "https://api.nzb.life/api"
+              },
+              {
+                "label": "NZBFinder",
+                "value": "https://nzbfinder.ws/api"
+              },
+              {
+                "label": "NZBgeek",
+                "value": "https://api.nzbgeek.info/api"
+              },
+              {
+                "label": "NzbNest",
+                "value": "https://nzbnest.com/api"
+              },
+              {
+                "label": "NzbNoob",
+                "value": "https://nzbnoob.com/api"
+              },
+              {
+                "label": "NzbPlanet",
+                "value": "https://api.nzbplanet.net/api"
+              },
+              {
+                "label": "NZBStars",
+                "value": "https://nzbstars.com/api"
+              },
+              {
+                "label": "PourCeSoir",
+                "value": "https://pourcesoir.in/api"
+              },
+              {
+                "label": "SearchNZB",
+                "value": "https://api.searchnzb.com/api"
+              },
+              {
+                "label": "SquareEyed",
+                "value": "https://squareeyed.org/api"
+              },
+              {
+                "label": "Tabula Rasa",
+                "value": "https://www.tabula-rasa.pw/api/v1/api"
+              },
+              {
+                "label": "Usenet Crawler",
+                "value": "https://www.usenet-crawler.com/api"
+              },
+              {
+                "label": "Videothek",
+                "value": "https://videothek.io/api"
+              }
+            ]
+          },
+          {
+            "id": "apiKey",
+            "name": "API Key",
+            "description": "The API key from your indexer profile page.",
+            "type": "password",
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "httpAddons",
+        "name": "🌐 HTTP Addons",
+        "description": "Select if you want addons for **HTTP** streams to be installed. These addons rely on free online hosters and generally have less reliable sources and speeds, but can be good backup options if you don't or can't use Debrid and/or P2P. You can select: \n* **None** to not include any HTTP addons at all. \n* **Install Additional HTTP Addons** to install them in addition to the Debrid/P2P addons. \n* **Install Only HTTP Addons** to not include any Debrid/P2P addons and only use HTTP addons. CHOOSE THIS IF P2P IS AN ISSUE IN YOUR COUNTRY AND YOU'RE NOT USING DEBRID (*Do not select this option if you ARE using a Debrid*).",
+        "type": "select",
+        "required": false,
+        "default": "none",
+        "options": [
+          {
+            "value": "none",
+            "label": "🚫 No HTTP Addons"
+          },
+          {
+            "value": "install",
+            "label": "➕ Install Additional HTTP Addons"
+          },
+          {
+            "value": "only",
+            "label": "🔒 Install Only HTTP Addons (Don't select with Debrid)"
+          }
+        ]
+      },
+      {
+        "id": "timeout",
+        "name": "⏱️ Global Timeout",
+        "description": "Enter the time in ms that you're willing to wait for results before your scraper addons timeout. You can set it a bit higher if you have issues getting enough results or you want to make sure to get as many results as possible.",
+        "type": "number",
+        "required": false,
+        "default": 5000
+      },
+      {
+        "id": "header.sorting",
+        "name": "↕️ Sorting Options",
+        "description": "",
+        "type": "alert",
+        "intent": "info"
+      },
+      {
+        "id": "sortingInfo",
+        "name": "",
+        "description": "Here you can modify the sort order if necessary. \n The default sort order is: \n *Cached/Uncached → SeaDex (for Anime) → Resolution → Quality → Stream Expressions → Stream Expression Score → Seeders (if Uncached/P2P) → Language → Bitrate* \n *Arabic edition: Arabic dub/hardsub preferences act inside Stream Expression Score.*",
+        "type": "alert",
+        "intent": "info-basic"
+      },
+      {
+        "id": "language",
+        "name": "🚩️ Language Priority",
+        "description": "This option can give priority to streams in your preferred languages by moving it up the sorting order. If you struggle to see your preferred languages in the results, even after adding it to the **Preferred Languages** list, try increasing the priority here. May rank lower-quality streams higher if your preferred languages are uncommon among the results, so use with caution.",
+        "type": "select",
+        "required": false,
+        "default": "default",
+        "options": [
+          {
+            "value": "default",
+            "label": "Default Sort Order"
+          },
+          {
+            "value": "medium",
+            "label": "Move Up After Resolution & Quality"
+          },
+          {
+            "value": "high",
+            "label": "Move Up First in Sort Order"
+          }
+        ]
+      },
+      {
+        "__if": "!services",
+        "id": "seeders",
+        "name": "🌱 Seeders Priority",
+        "description": "Change this if you want highest seeders to be prioritized more on the sorting order, even if they have lower Resolution/Quality/SEL Scores. In most cases, low seeders will have already been filtered out by the internal filtering (SEL).",
+        "type": "select",
+        "required": false,
+        "default": "default",
+        "options": [
+          {
+            "value": "default",
+            "label": "Default Sort Order"
+          },
+          {
+            "value": "medium",
+            "label": "Move Up After Resolution & Quality"
+          },
+          {
+            "value": "high",
+            "label": "Move Up First in Sort Order"
+          }
+        ]
+      },
+      {
+        "id": "credits",
+        "name": "Credits",
+        "description": "",
+        "type": "socials",
+        "socials": [
+          {
+            "id": "website",
+            "url": "https://numb3rs.stream"
+          },
+          {
+            "id": "github",
+            "url": "https://github.com/luckynumb3rs/stremio-perfect-setup"
+          },
+          {
+            "id": "ko-fi",
+            "url": "https://ko-fi.com/luckynumb3rs"
+          }
+        ]
+      }
+    ],
+    "sourceUrl": "https://raw.githubusercontent.com/aelhusseini/arabic-perfect-setup/main/templates/AIOStreams-Arabic-Edition.json",
+    "changelog": [
+      {
+        "version": "2026.1122.1844",
+        "date": "2026-11-22",
+        "content": "- Rebuilt: numb3rs template (v2.0.10) or the Arabic layer changed"
+      },
+      {
+        "version": "1.6.2",
+        "date": "2026-11-22",
+        "content": "- The third Aradeb link (Premiumize) is back: three links, one per debrid service, as in 1.6.0\n- A release found through more than one link still shows once (cached copy first, then service order)"
+      },
+      {
+        "version": "1.6.1",
+        "date": "2026-11-22",
+        "content": "- Two Aradeb links instead of three: TorBox (main) and AllDebrid (second). The third link field is gone; Premiumize still serves every other source"
+      },
+      {
+        "version": "1.6.0",
+        "date": "2026-11-22",
+        "content": "- Aradeb 2.0: each Aradeb configuration now has one debrid service and a UUID link; the three link fields say which configuration goes where\n- Aradeb Resources now brings Aradeb's Arabic search only, once its rows are turned off in Aradeb (they live in Xperience and Ali's collection pack instead)\n- Disney Arabic Dub: streams only, its row is no longer suggested (Aradeb's dubbed rows cover it)"
+      },
+      {
+        "version": "1.5.0",
+        "date": "2026-11-08",
+        "content": "- Removed TorBox Search: TorBox shut its search API down and AIOStreams disabled the addon\n- Added Usenet through TorBox Pro with your own Newznab indexer (up to two)\n- Usenet results are left out of the relaxed checks for Arabic originals"
+      },
+      {
+        "version": "1.4.0",
+        "date": "2026-11-08",
+        "content": "- Up to three Aradeb links (one per debrid service); extra links are streams only\n- Aradeb results still skip every filter but are now deduplicated, so a release found through two links shows once (cached copy first, then service order)"
+      },
+      {
+        "version": "1.3.0",
+        "date": "2026-11-08",
+        "content": "- Added optional TorBox Search addon with Usenet results (TorBox Pro)\n- Removed emojis from the Arabic layer's names, labels and expression names"
+      },
+      {
+        "version": "1.2.0",
+        "date": "2026-11-08",
+        "content": "- Formatter Style now defaults to numb3rs' Flat Monochrome Icons"
+      },
+      {
+        "version": "1.1.0",
+        "date": "2026-11-08",
+        "content": "- Added Disney Arabic Dub addon (streams only by default, movies only, result passthrough)\n- Build supports hosting with automatic update notifications"
+      },
+      {
+        "version": "1.0.0",
+        "date": "2026-11-08",
+        "content": "- Forked from the numb3rs AIOStreams template\n- Added Aradeb custom addon (result passthrough, optional pin, own timeout)\n- Added Arabic-originals included expression (skips title/year/digital-release checks)\n- Added Arabic dub / hardsub ranked and excluded expressions\n- Added SubDL and SubSource subtitle addons\n- Defaults: languages Arabic + English, subtitles ar + en\n- Service order TorBox, AllDebrid, Premiumize; uncached dedup single result"
+      }
+    ]
+  },
+  "config": {
+    "addonName": "AIOStreams",
+    "addonLogo": "https://numb3rs.stream/assets/images/aiostreams.svg",
+    "services": [
+      {
+        "id": "torbox",
+        "enabled": false,
+        "credentials": {}
+      },
+      {
+        "id": "alldebrid",
+        "enabled": false,
+        "credentials": {}
+      },
+      {
+        "id": "premiumize",
+        "enabled": false,
+        "credentials": {}
+      }
+    ],
+    "addonCategoryColors": {
+      "Anime": "orange",
+      "HTTP": "emerald",
+      "Arabic": "teal"
+    },
+    "presets": [
+      {
+        "__if": "services and inputs.anime",
+        "category": "Anime",
+        "type": "seadex",
+        "instanceId": "sdx",
+        "enabled": true,
+        "options": {
+          "name": "SeaDex",
+          "timeout": "{{inputs.timeout}}",
+          "mediaTypes": [
+            "anime"
+          ]
+        }
+      },
+      {
+        "__if": "services and inputs.httpAddons != only",
+        "type": "library",
+        "instanceId": "lib",
+        "enabled": true,
+        "options": {
+          "name": "Library",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "mediaTypes": [],
+          "showRefreshActions": [
+            "catalog"
+          ],
+          "skipProcessing": false,
+          "hideStreams": false,
+          "useMultipleInstances": false
+        }
+      },
+      {
+        "__if": "inputs.aradeb",
+        "category": "Arabic",
+        "type": "custom",
+        "instanceId": "ara",
+        "enabled": true,
+        "options": {
+          "name": "Aradeb",
+          "manifestUrl": "{{inputs.aradebUrl}}",
+          "timeout": "{{inputs.aradebTimeout}}",
+          "resources": {
+            "__switch": "inputs.aradebMode",
+            "cases": {
+              "streams": [
+                "stream"
+              ]
+            },
+            "default": [
+              "stream",
+              "catalog",
+              "meta"
+            ]
+          },
+          "mediaTypes": [],
+          "pinPosition": {
+            "__switch": "inputs.aradebPosition",
+            "cases": {
+              "top": "top"
+            },
+            "default": {
+              "__remove": true
+            }
+          },
+          "libraryAddon": false,
+          "formatPassthrough": false,
+          "resultPassthrough": false
+        }
+      },
+      {
+        "__if": "inputs.aradeb and inputs.aradebUrl2",
+        "category": "Arabic",
+        "type": "custom",
+        "instanceId": "ar2",
+        "enabled": true,
+        "options": {
+          "name": "Aradeb",
+          "manifestUrl": "{{inputs.aradebUrl2}}",
+          "timeout": "{{inputs.aradebTimeout}}",
+          "resources": [
+            "stream"
+          ],
+          "mediaTypes": [],
+          "pinPosition": {
+            "__switch": "inputs.aradebPosition",
+            "cases": {
+              "top": "top"
+            },
+            "default": {
+              "__remove": true
+            }
+          },
+          "libraryAddon": false,
+          "formatPassthrough": false,
+          "resultPassthrough": false
+        }
+      },
+      {
+        "__if": "inputs.aradeb and inputs.aradebUrl3",
+        "category": "Arabic",
+        "type": "custom",
+        "instanceId": "ar3",
+        "enabled": true,
+        "options": {
+          "name": "Aradeb",
+          "manifestUrl": "{{inputs.aradebUrl3}}",
+          "timeout": "{{inputs.aradebTimeout}}",
+          "resources": [
+            "stream"
+          ],
+          "mediaTypes": [],
+          "pinPosition": {
+            "__switch": "inputs.aradebPosition",
+            "cases": {
+              "top": "top"
+            },
+            "default": {
+              "__remove": true
+            }
+          },
+          "libraryAddon": false,
+          "formatPassthrough": false,
+          "resultPassthrough": false
+        }
+      },
+      {
+        "__if": "inputs.disneyDub",
+        "category": "Arabic",
+        "type": "custom",
+        "instanceId": "dad",
+        "enabled": true,
+        "options": {
+          "name": "Disney Arabic Dub",
+          "manifestUrl": "{{inputs.disneyDubUrl}}",
+          "timeout": "{{inputs.timeout}}",
+          "resources": {
+            "__switch": "inputs.disneyDubCatalog",
+            "cases": {
+              "catalog": [
+                "stream",
+                "catalog"
+              ]
+            },
+            "default": [
+              "stream"
+            ]
+          },
+          "mediaTypes": [
+            "movie"
+          ],
+          "libraryAddon": false,
+          "formatPassthrough": false,
+          "resultPassthrough": true
+        }
+      },
+      {
+        "__if": "services and inputs.debridio and inputs.httpAddons != only",
+        "type": "debridio",
+        "instanceId": "deb",
+        "enabled": true,
+        "options": {
+          "name": "Debridio",
+          "timeout": "{{inputs.timeout}}",
+          "debridioApiKey": "{{inputs.debridioApiKey}}"
+        }
+      },
+      {
+        "__if": "inputs.httpAddons != only",
+        "type": "torrentio",
+        "instanceId": "tio",
+        "enabled": true,
+        "options": {
+          "name": "Torrentio",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "providers": [],
+          "useMultipleInstances": false
+        }
+      },
+      {
+        "__if": "inputs.httpAddons != only",
+        "type": "meteor",
+        "instanceId": "met",
+        "enabled": true,
+        "options": {
+          "name": "Meteor",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "includeP2P": {
+            "__switch": "services",
+            "cases": {
+              "": true
+            },
+            "default": false
+          },
+          "removeTrash": false,
+          "useMultipleInstances": false,
+          "mediaTypes": []
+        }
+      },
+      {
+        "__if": "inputs.httpAddons != only",
+        "type": "comet",
+        "instanceId": "com",
+        "enabled": true,
+        "options": {
+          "name": "Comet",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "includeP2P": {
+            "__switch": "services",
+            "cases": {
+              "": true
+            },
+            "default": false
+          },
+          "removeTrash": false,
+          "mediaTypes": []
+        }
+      },
+      {
+        "__if": "inputs.httpAddons != only",
+        "type": "stremthruTorz",
+        "instanceId": "stz",
+        "enabled": true,
+        "options": {
+          "name": "StremThru Torz",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "includeP2P": {
+            "__switch": "services",
+            "cases": {
+              "": true
+            },
+            "default": false
+          },
+          "useMultipleInstances": false,
+          "mediaTypes": []
+        }
+      },
+      {
+        "__if": "inputs.httpAddons != only",
+        "type": "mediafusion",
+        "instanceId": "mdf",
+        "enabled": true,
+        "options": {
+          "name": "MediaFusion",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "useCachedResultsOnly": true,
+          "enableWatchlistCatalogs": false,
+          "downloadViaBrowser": false,
+          "contributorStreams": false,
+          "certificationLevelsFilter": [],
+          "nudityFilter": [],
+          "mediaTypes": []
+        }
+      },
+      {
+        "__if": "services and inputs.httpAddons != only",
+        "type": "knaben",
+        "instanceId": "kna",
+        "enabled": true,
+        "options": {
+          "name": "Knaben",
+          "timeout": "{{inputs.timeout}}",
+          "mediaTypes": [],
+          "useMultipleInstances": false
+        }
+      },
+      {
+        "__if": "inputs.httpAddons != only",
+        "type": "peerflix",
+        "instanceId": "pfl",
+        "enabled": true,
+        "options": {
+          "name": "Peerflix",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "mediaTypes": [],
+          "useMultipleInstances": false,
+          "showTorrentLinks": {
+            "__switch": "services",
+            "cases": {
+              "": true
+            },
+            "default": false
+          }
+        }
+      },
+      {
+        "__if": "services and inputs.anime and inputs.httpAddons != only",
+        "category": "Anime",
+        "type": "animetosho",
+        "instanceId": "ato",
+        "enabled": true,
+        "options": {
+          "name": "AnimeTosho",
+          "timeout": "{{inputs.timeout}}",
+          "mediaTypes": [
+            "anime"
+          ],
+          "useMultipleInstances": false
+        }
+      },
+      {
+        "__if": "inputs.httpAddons != none",
+        "category": "HTTP",
+        "type": "sootio",
+        "instanceId": "soo",
+        "enabled": true,
+        "options": {
+          "name": "Sootio",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "httpProviders": [
+            "http4khdhub",
+            "httpHDHub4u",
+            "httpUHDMovies",
+            "httpMoviesDrive",
+            "httpMKVCinemas",
+            "httpMkvDrama",
+            "httpMalluMv",
+            "httpCineDoze",
+            "httpNetflixMirror",
+            "httpVixSrc"
+          ],
+          "mediaTypes": [],
+          "useMultipleInstances": false
+        }
+      },
+      {
+        "__if": "inputs.httpAddons != none",
+        "category": "HTTP",
+        "type": "hdhub",
+        "instanceId": "hdh",
+        "enabled": true,
+        "options": {
+          "name": "HD Hub",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "mediaTypes": [],
+          "tb_only": false
+        }
+      },
+      {
+        "__if": "inputs.httpAddons != none",
+        "category": "HTTP",
+        "type": "webstreamr",
+        "instanceId": "wst",
+        "enabled": true,
+        "options": {
+          "name": "WebStreamr",
+          "timeout": "{{inputs.timeout}}",
+          "resources": [
+            "stream"
+          ],
+          "url": "https://87d6a6ef6b58-webstreamrmbg.baby-beamup.club",
+          "mediaTypes": [],
+          "providers": [
+            "multi",
+            "en",
+            "de",
+            "es",
+            "fr",
+            "hi",
+            "it",
+            "mx"
+          ],
+          "includeExternalUrls": false,
+          "showErrors": false
+        }
+      },
+      {
+        "__if": "services.torbox and inputs.usenet and inputs.httpAddons != only",
+        "type": "newznab",
+        "instanceId": "nzb",
+        "enabled": true,
+        "options": {
+          "name": "Usenet",
+          "api": {
+            "url": "{{inputs.usenetIndexer.url}}",
+            "apiKey": "{{inputs.usenetIndexer.apiKey}}"
+          },
+          "timeout": "{{inputs.timeout}}",
+          "mediaTypes": [],
+          "services": [
+            "torbox"
+          ]
+        }
+      },
+      {
+        "__if": "services.torbox and inputs.usenet and inputs.httpAddons != only and inputs.usenetIndexer2.url",
+        "type": "newznab",
+        "instanceId": "nz2",
+        "enabled": true,
+        "options": {
+          "name": "Usenet 2",
+          "api": {
+            "url": "{{inputs.usenetIndexer2.url}}",
+            "apiKey": "{{inputs.usenetIndexer2.apiKey}}"
+          },
+          "timeout": "{{inputs.timeout}}",
+          "mediaTypes": [],
+          "services": [
+            "torbox"
+          ]
+        }
+      },
+      {
+        "type": "opensubtitles-v3-plus",
+        "instanceId": "osb",
+        "enabled": true,
+        "options": {
+          "name": "OpenSubtitles V3 Pro",
+          "timeout": 15000,
+          "resources": [
+            "subtitles"
+          ],
+          "language": [
+            "{{inputs.subtitles}}"
+          ],
+          "sources": "all",
+          "includeAiTranslated": true,
+          "movieHashPlusAutoAdjustment": true
+        }
+      },
+      {
+        "__if": "inputs.subdl",
+        "type": "subdl",
+        "instanceId": "sdl",
+        "enabled": true,
+        "options": {
+          "name": "SubDL",
+          "timeout": 15000,
+          "resources": [
+            "subtitles"
+          ],
+          "subDlApiKey": "{{inputs.subdlApiKey}}",
+          "language": [
+            "AR",
+            "EN"
+          ],
+          "hearingImpairment": "hiInclude"
+        }
+      },
+      {
+        "__if": "inputs.subsource",
+        "type": "subsource",
+        "instanceId": "sbs",
+        "enabled": true,
+        "options": {
+          "name": "SubSource",
+          "timeout": 15000,
+          "resources": [
+            "subtitles"
+          ],
+          "subSourceApiKey": "{{inputs.subsourceApiKey}}",
+          "language": [
+            "Arabic",
+            "English"
+          ],
+          "subtitleTypes": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "hearingImpairment": "hiInclude"
+        }
+      }
+    ],
+    "formatter": {
+      "__switch": "inputs.formatterChoice",
+      "cases": {
+        "flat": {
+          "id": "custom",
+          "definition": {
+            "name": "{service.cached::istrue[\"⚡ \"||\"\"]}{service.cached::isfalse[\"⏳ \"||\"\"]}{stream.type::=p2p[\"🧲 \"||\"\"]}{stream.type::=http[\"🌐 \"||\"\"]}{stream.type::=live[\"📺 \"||\"\"]}{stream.type::=youtube[\"▶️ \"||\"\"]}{stream.type::=archive[\"🗄️ \"||\"\"]}{stream.type::=external[\"↗️ \"||\"\"]}{stream.type::=statistic[\"📊 \"||\"\"]}{stream.type::=info[\"ℹ️ \"||\"\"]}{stream.type::=error[\"⛔ \"||\"\"]}{stream.resolution::exists[\"{stream.resolution::replace('2160p','UHD ⁴ᴷ')::replace('1440p','QHD ²ᴷ')::replace('1080p','FHD    ')::replace('p','P')}   \"||\"\"]}\n{stream.quality::exists[\"⌜{stream.quality::title::replace('Bluray Remux','Remux')::smallcaps}⌟    \"||\"\"]}\n{stream.nSeScore::>=10[\"{stream.nSeScore::pstar::replace('★','◆')::replace('⯪','⬖')::replace('☆','◇')} \"||\"\"]}",
+            "description": {
+              "__switch": "inputs.formatterFilename",
+              "cases": {
+                "true": "{stream.editions::exists[\"▶︎  {stream.editions::join(' · ')} \"||\"\"]}\n{stream.encode::exists[\"▣  {stream.encode}  \"||\"\"]}{stream.visualTags::exists[\"✦  {stream.visualTags::join(' · ')}  \"||\"\"]}\n{stream.audioTags::exists[\"♬  {stream.audioTags::join(' · ')}  \"||\"\"]}{stream.audioChannels::exists[\"☊  {stream.audioChannels::join(' · ')} \"||\"\"]}\n{stream.size::>0::and::stream.seasonPack::istrue[\"⧉  \"||\"\"]}{stream.size::>0::and::stream.seasonPack::isfalse[\"◧  \"||\"\"]}{stream.size::>0[\"{stream.size::sbytes}\"||\"\"]}{stream.bitrate::exists[\" · {stream.bitrate::sbitrate::replace('Mbps','ᴹᵇᵖˢ')::replace('Kbps','ᴷᵇᵖˢ')}  \"||\"\"]}{stream.message::~Download[\"{tools.removeLine}\"||\"\"]}{stream.age::exists[\"⟳ {stream.age}\"||\"\"]}\n{stream.proxied::istrue[\"⛊ \"||\"⛉ \"]}{service.shortName::exists[\"[{service.shortName}] \"||\"\"]}{addon.name}{stream.type::replace('debrid',' ')::exists[\" · {stream.type::replace('debrid',' ')::replace('stremio-usenet','nntp')::smallcaps}\"||\"\"]}{service.cached::isfalse::or::stream.type::=p2p::and::stream.seeders::>0[\"  ⇋ {stream.seeders}𖧧  \"||\"\"]}\n{stream.languages::exists[\"⚐  {stream.smallLanguageCodes::join(' · ')::replace('ᴅᴜᴀʟ ᴀᴜᴅɪᴏ','ᴅᴜᴀʟ')::replace('ᴅᴜʙʙᴇᴅ','ᴅᴜʙ')}  \"||\"\"]}{stream.uSubtitles::exists[\"[☰  {stream.uSmallSubtitleCodes::join(' · ')}]  \"||\"\"]}{stream.seadex[\"»  \"||\"\"]}{stream.seadexBest::istrue[\"[ʙᴇsᴛ] \"||\"\"]}{stream.seadex::istrue::and::stream.seadexBest::isfalse[\"[ᴀʟᴛ] \"||\"\"]}\n{stream.filename::exists[\"✎ {stream.filename}  \"||\"\"]}\n{stream.message::exists[\"ⓘ {stream.message::smallcaps}  \"||\"\"]}{stream.message::~ðŸ§[\"{tools.removeLine}\"||\"\"]}"
+              },
+              "default": "{stream.editions::exists[\"▶︎  {stream.editions::join(' · ')} \"||\"\"]}\n{stream.encode::exists[\"▣  {stream.encode}  \"||\"\"]}{stream.visualTags::exists[\"✦  {stream.visualTags::join(' · ')}  \"||\"\"]}\n{stream.audioTags::exists[\"♬  {stream.audioTags::join(' · ')}  \"||\"\"]}{stream.audioChannels::exists[\"☊  {stream.audioChannels::join(' · ')} \"||\"\"]}\n{stream.size::>0::and::stream.seasonPack::istrue[\"⧉  \"||\"\"]}{stream.size::>0::and::stream.seasonPack::isfalse[\"◧  \"||\"\"]}{stream.size::>0[\"{stream.size::sbytes}\"||\"\"]}{stream.bitrate::exists[\" · {stream.bitrate::sbitrate::replace('Mbps','ᴹᵇᵖˢ')::replace('Kbps','ᴷᵇᵖˢ')}  \"||\"\"]}{stream.message::~Download[\"{tools.removeLine}\"||\"\"]}{stream.age::exists[\"⟳ {stream.age}\"||\"\"]}\n{stream.proxied::istrue[\"⛊ \"||\"⛉ \"]}{service.shortName::exists[\"[{service.shortName}] \"||\"\"]}{addon.name}{stream.type::replace('debrid',' ')::exists[\" · {stream.type::replace('debrid',' ')::replace('stremio-usenet','nntp')::smallcaps}\"||\"\"]}{service.cached::isfalse::or::stream.type::=p2p::and::stream.seeders::>0[\"  ⇋ {stream.seeders}𖧧  \"||\"\"]}\n{stream.languages::exists[\"⚐  {stream.smallLanguageCodes::join(' · ')::replace('ᴅᴜᴀʟ ᴀᴜᴅɪᴏ','ᴅᴜᴀʟ')::replace('ᴅᴜʙʙᴇᴅ','ᴅᴜʙ')}  \"||\"\"]}{stream.uSubtitles::exists[\"[☰  {stream.uSmallSubtitleCodes::join(' · ')}]  \"||\"\"]}{stream.seadex[\"»  \"||\"\"]}{stream.seadexBest::istrue[\"[ʙᴇsᴛ] \"||\"\"]}{stream.seadex::istrue::and::stream.seadexBest::isfalse[\"[ᴀʟᴛ] \"||\"\"]}\n{stream.message::exists[\"ⓘ {stream.message::smallcaps}  \"||\"\"]}{stream.message::~ðŸ§[\"{tools.removeLine}\"||\"\"]}"
+            }
+          }
+        },
+        "color": {
+          "id": "custom",
+          "definition": {
+            "name": "{service.cached::istrue[\"⚡ \"||\"\"]}{service.cached::isfalse[\"⏳ \"||\"\"]}{stream.type::=p2p[\"🧲 \"||\"\"]}{stream.type::=http[\"🌐 \"||\"\"]}{stream.type::=live[\"📺 \"||\"\"]}{stream.type::=youtube[\"▶️ \"||\"\"]}{stream.type::=archive[\"🗄️ \"||\"\"]}{stream.type::=external[\"↗️ \"||\"\"]}{stream.type::=statistic[\"📊 \"||\"\"]}{stream.type::=info[\"ℹ️ \"||\"\"]}{stream.type::=error[\"⛔ \"||\"\"]}{stream.resolution::exists[\"{stream.resolution::replace('2160p','UHD ⁴ᴷ')::replace('1440p','QHD ²ᴷ')::replace('1080p','FHD    ')::replace('p','P')}   \"||\"\"]}\n{stream.quality::exists[\"⌜{stream.quality::title::replace('Bluray Remux','Remux')::smallcaps}⌟    \"||\"\"]}\n{stream.nSeScore::>=10[\"{stream.nSeScore::pstar::replace('★','◆')::replace('⯪','⬖')::replace('☆','◇')} \"||\"\"]}",
+            "description": {
+              "__switch": "inputs.formatterFilename",
+              "cases": {
+                "true": "{stream.editions::exists[\"🎬  {stream.editions::join(' · ')} \"||\"\"]}\n{stream.encode::exists[\"📼  {stream.encode}  \"||\"\"]}{stream.visualTags::exists[\"🎥  {stream.visualTags::join(' · ')}  \"||\"\"]}\n{stream.audioTags::exists[\"🎵  {stream.audioTags::join(' · ')}  \"||\"\"]}{stream.audioChannels::exists[\"🎧  {stream.audioChannels::join(' · ')} \"||\"\"]}\n{stream.size::>0::and::stream.seasonPack::istrue[\"📚  \"||\"\"]}{stream.size::>0::and::stream.seasonPack::isfalse[\"💾  \"||\"\"]}{stream.size::>0[\"{stream.size::sbytes}\"||\"\"]}{stream.bitrate::exists[\" · {stream.bitrate::sbitrate::replace('Mbps','ᴹᵇᵖˢ')::replace('Kbps','ᴷᵇᵖˢ')}  \"||\"\"]}{stream.message::~Download[\"{tools.removeLine}\"||\"\"]}{stream.age::exists[\"🕒 {stream.age}\"||\"\"]}\n{stream.proxied::istrue[\"🔐 \"||\"🔧 \"]}{service.shortName::exists[\"[{service.shortName}] \"||\"\"]}{addon.name}{stream.type::replace('debrid',' ')::exists[\" · {stream.type::replace('debrid',' ')::replace('stremio-usenet','nntp')::smallcaps}\"||\"\"]}{service.cached::isfalse::or::stream.type::=p2p::and::stream.seeders::>0[\"  ⇋ {stream.seeders}🌱  \"||\"\"]}\n{stream.languages::exists[\"🔊  {stream.languageEmojis::join(' · ')::replace('ᴅᴜᴀʟ ᴀᴜᴅɪᴏ','ᴅᴜᴀʟ')::replace('ᴅᴜʙʙᴇᴅ','ᴅᴜʙ')}  \"||\"\"]}{stream.uSubtitles::exists[\"[💬  {stream.uSubtitleEmojis::join(' · ')}]  \"||\"\"]}{stream.seadex[\"»  \"||\"\"]}{stream.seadexBest::istrue[\"[ʙᴇsᴛ] \"||\"\"]}{stream.seadex::istrue::and::stream.seadexBest::isfalse[\"[ᴀʟᴛ] \"||\"\"]}\n{stream.filename::exists[\"✏️ {stream.filename}  \"||\"\"]}\n{stream.message::exists[\"ℹ️ {stream.message::smallcaps}  \"||\"\"]}{stream.message::~ðŸ§[\"{tools.removeLine}\"||\"\"]}"
+              },
+              "default": "{stream.editions::exists[\"🎬  {stream.editions::join(' · ')} \"||\"\"]}\n{stream.encode::exists[\"📼  {stream.encode}  \"||\"\"]}{stream.visualTags::exists[\"🎥  {stream.visualTags::join(' · ')}  \"||\"\"]}\n{stream.audioTags::exists[\"🎵  {stream.audioTags::join(' · ')}  \"||\"\"]}{stream.audioChannels::exists[\"🎧  {stream.audioChannels::join(' · ')} \"||\"\"]}\n{stream.size::>0::and::stream.seasonPack::istrue[\"📚  \"||\"\"]}{stream.size::>0::and::stream.seasonPack::isfalse[\"💾  \"||\"\"]}{stream.size::>0[\"{stream.size::sbytes}\"||\"\"]}{stream.bitrate::exists[\" · {stream.bitrate::sbitrate::replace('Mbps','ᴹᵇᵖˢ')::replace('Kbps','ᴷᵇᵖˢ')}  \"||\"\"]}{stream.message::~Download[\"{tools.removeLine}\"||\"\"]}{stream.age::exists[\"🕒 {stream.age}\"||\"\"]}\n{stream.proxied::istrue[\"🔐 \"||\"🔧 \"]}{service.shortName::exists[\"[{service.shortName}] \"||\"\"]}{addon.name}{stream.type::replace('debrid',' ')::exists[\" · {stream.type::replace('debrid',' ')::replace('stremio-usenet','nntp')::smallcaps}\"||\"\"]}{service.cached::isfalse::or::stream.type::=p2p::and::stream.seeders::>0[\"  ⇋ {stream.seeders}🌱  \"||\"\"]}\n{stream.languages::exists[\"🔊  {stream.languageEmojis::join(' · ')::replace('ᴅᴜᴀʟ ᴀᴜᴅɪᴏ','ᴅᴜᴀʟ')::replace('ᴅᴜʙʙᴇᴅ','ᴅᴜʙ')}  \"||\"\"]}{stream.uSubtitles::exists[\"[💬  {stream.uSubtitleEmojis::join(' · ')}]  \"||\"\"]}{stream.seadex[\"»  \"||\"\"]}{stream.seadexBest::istrue[\"[ʙᴇsᴛ] \"||\"\"]}{stream.seadex::istrue::and::stream.seadexBest::isfalse[\"[ᴀʟᴛ] \"||\"\"]}\n{stream.message::exists[\"ℹ️ {stream.message::smallcaps}  \"||\"\"]}{stream.message::~ðŸ§[\"{tools.removeLine}\"||\"\"]}"
+            }
+          }
+        }
+      }
+    },
+    "preferredQualities": [
+      "BluRay",
+      "BluRay REMUX",
+      "WEB-DL",
+      "WEBRip",
+      "HDRip",
+      "HC HD-Rip",
+      "DVDRip",
+      "HDTV",
+      "Unknown"
+    ],
+    "preferredResolutions": [
+      "2160p",
+      "1440p",
+      "1080p",
+      "720p",
+      "576p",
+      "480p",
+      "360p",
+      "240p",
+      "144p",
+      "Unknown"
+    ],
+    "excludedQualities": [
+      "CAM",
+      "SCR",
+      "TS",
+      "TC"
+    ],
+    "excludedVisualTags": [
+      "3D"
+    ],
+    "sortCriteria": {
+      "global": [
+        {
+          "key": "cached",
+          "direction": "desc"
+        }
+      ],
+      "cached": [
+        {
+          "key": "seadex",
+          "direction": "desc"
+        },
+        {
+          "__if": "inputs.language == high",
+          "key": "language",
+          "direction": "desc"
+        },
+        {
+          "key": "resolution",
+          "direction": "desc"
+        },
+        {
+          "key": "quality",
+          "direction": "desc"
+        },
+        {
+          "__if": "inputs.language == medium",
+          "key": "language",
+          "direction": "desc"
+        },
+        {
+          "key": "streamExpressionMatched",
+          "direction": "desc"
+        },
+        {
+          "key": "streamExpressionScore",
+          "direction": "desc"
+        },
+        {
+          "__if": "inputs.language == default",
+          "key": "language",
+          "direction": "desc"
+        },
+        {
+          "key": "bitrate",
+          "direction": "desc"
+        }
+      ],
+      "uncached": [
+        {
+          "key": "seadex",
+          "direction": "desc"
+        },
+        {
+          "__if": "inputs.seeders == high",
+          "key": "seeders",
+          "direction": "desc"
+        },
+        {
+          "__if": "inputs.language == high",
+          "key": "language",
+          "direction": "desc"
+        },
+        {
+          "key": "resolution",
+          "direction": "desc"
+        },
+        {
+          "key": "quality",
+          "direction": "desc"
+        },
+        {
+          "__if": "inputs.seeders == medium",
+          "key": "seeders",
+          "direction": "desc"
+        },
+        {
+          "__if": "inputs.language == medium",
+          "key": "language",
+          "direction": "desc"
+        },
+        {
+          "key": "streamExpressionMatched",
+          "direction": "desc"
+        },
+        {
+          "key": "streamExpressionScore",
+          "direction": "desc"
+        },
+        {
+          "__if": "inputs.seeders == default",
+          "key": "seeders",
+          "direction": "desc"
+        },
+        {
+          "__if": "inputs.language == default",
+          "key": "language",
+          "direction": "desc"
+        },
+        {
+          "key": "bitrate",
+          "direction": "desc"
+        }
+      ]
+    },
+    "deduplicator": {
+      "enabled": true,
+      "excludeAddons": [],
+      "keys": [
+        "filename",
+        "infoHash",
+        "smartDetect"
+      ],
+      "cached": "single_result",
+      "uncached": "single_result",
+      "p2p": "single_result"
+    },
+    "proxy": {
+      "id": "mediaflow",
+      "proxiedAddons": [],
+      "proxiedServices": []
+    },
+    "trusted": false,
+    "excludedResolutions": [],
+    "includedResolutions": [],
+    "requiredResolutions": [],
+    "includedQualities": [],
+    "requiredQualities": [],
+    "excludedLanguages": [],
+    "includedLanguages": [],
+    "requiredLanguages": {
+      "__if": "inputs.languagesRequired",
+      "__value": [
+        "{{inputs.languages}}",
+        "Original",
+        "Dual Audio",
+        "Multi",
+        "Dubbed",
+        "Unknown"
+      ]
+    },
+    "preferredLanguages": [
+      "{{inputs.languages}}",
+      "Original",
+      "Dual Audio",
+      "Multi",
+      "Dubbed",
+      "Unknown"
+    ],
+    "preferredVisualTags": [
+      "HDR+DV",
+      "HDR10+",
+      "HDR10",
+      "DV",
+      "HDR",
+      "10bit",
+      "IMAX"
+    ],
+    "preferredAudioTags": [
+      "Atmos",
+      "DD+",
+      "DD"
+    ],
+    "preferredStreamTypes": [],
+    "excludedEncodes": [],
+    "includedEncodes": [],
+    "requiredEncodes": [],
+    "preferredEncodes": [
+      "AV1",
+      "HEVC",
+      "AVC",
+      "Unknown"
+    ],
+    "excludeCachedFromAddons": [],
+    "excludeCachedFromServices": [],
+    "excludeCachedFromStreamTypes": [],
+    "excludeUncachedFromAddons": [],
+    "excludeUncachedFromServices": [],
+    "excludeUncachedFromStreamTypes": [],
+    "rpdbApiKey": "t0-free-rpdb",
+    "hideErrorsForResources": [],
+    "tmdbAccessToken": "<template_placeholder>",
+    "precacheNextEpisode": true,
+    "catalogModifications": [],
+    "tmdbApiKey": "<template_placeholder>",
+    "tvdbApiKey": "<template_placeholder>",
+    "requiredAudioTags": [],
+    "excludedAudioTags": [],
+    "includedAudioTags": [],
+    "seederRangeTypes": [],
+    "autoPlay": {
+      "method": "matchingFile",
+      "attributes": [
+        "resolution",
+        "quality"
+      ]
+    },
+    "cacheAndPlay": {
+      "enabled": true,
+      "streamTypes": [
+        "usenet"
+      ]
+    },
+    "nzbFailover": {
+      "enabled": true
+    },
+    "statistics": {
+      "enabled": false,
+      "position": "bottom",
+      "statsToShow": [
+        "addon",
+        "filter",
+        "timing"
+      ]
+    },
+    "usePosterServiceForMeta": true,
+    "posterService": "rpdb",
+    "usePosterRedirectApi": true,
+    "requiredVisualTags": [],
+    "includedVisualTags": [],
+    "ageRangeTypes": [
+      "usenet"
+    ],
+    "digitalReleaseFilter": {
+      "enabled": true,
+      "requestTypes": [
+        "movie",
+        "series"
+      ],
+      "tolerance": 10,
+      "addons": []
+    },
+    "mergedCatalogs": [],
+    "titleMatching": {
+      "enabled": true,
+      "mode": "exact",
+      "similarityThreshold": 1,
+      "requestTypes": [
+        "movie",
+        "series",
+        "anime"
+      ],
+      "addons": []
+    },
+    "yearMatching": {
+      "enabled": true,
+      "strict": true,
+      "requestTypes": [
+        "movie",
+        "series",
+        "anime"
+      ],
+      "addons": []
+    },
+    "seasonEpisodeMatching": {
+      "enabled": true,
+      "strict": true,
+      "requestTypes": [
+        "series"
+      ],
+      "addons": []
+    },
+    "preferredRegexPatterns": [],
+    "syncedPreferredRegexUrls": [],
+    "rankedStreamExpressions": [
+      {
+        "__if": "inputs.arabicDubs == prefer",
+        "expression": "/*AR Dub*/ originalLanguage != 'Arabic' ? merge(negate(language(streams, 'English', 'Original', 'Dual Audio', 'Multi'), language(streams, 'Arabic')), keyword(streams, 'filename,folderName', 'arabic dub', 'arabic dubbed', 'arabic dubbing', 'ar dub', 'dub arabic', 'dubbed arabic', 'مدبلج', 'مدبلجة', 'دبلجة', 'دوبلاج')) : []",
+        "score": 2000,
+        "enabled": true
+      },
+      {
+        "__if": "inputs.arabicDubs == avoid",
+        "expression": "/*AR Dub*/ originalLanguage != 'Arabic' ? merge(negate(language(streams, 'English', 'Original', 'Dual Audio', 'Multi'), language(streams, 'Arabic')), keyword(streams, 'filename,folderName', 'arabic dub', 'arabic dubbed', 'arabic dubbing', 'ar dub', 'dub arabic', 'dubbed arabic', 'مدبلج', 'مدبلجة', 'دبلجة', 'دوبلاج')) : []",
+        "score": -2000,
+        "enabled": true
+      },
+      {
+        "__if": "inputs.arabicHardsubs == prefer",
+        "expression": "/*AR Hardsub*/ originalLanguage != 'Arabic' ? keyword(streams, 'filename,folderName', 'arabic sub', 'arabic subs', 'arabic subbed', 'arabic subtitle', 'arabic subtitles', 'arabic hardsub', 'arabic hardsubs', 'ar sub', 'ar subs', 'arsub', 'arsubs', 'hardsub arabic', 'مترجم', 'مترجمة', 'ترجمة') : []",
+        "score": 2000,
+        "enabled": true
+      },
+      {
+        "__if": "inputs.arabicHardsubs == avoid",
+        "expression": "/*AR Hardsub*/ originalLanguage != 'Arabic' ? keyword(streams, 'filename,folderName', 'arabic sub', 'arabic subs', 'arabic subbed', 'arabic subtitle', 'arabic subtitles', 'arabic hardsub', 'arabic hardsubs', 'ar sub', 'ar subs', 'arsub', 'arsubs', 'hardsub arabic', 'مترجم', 'مترجمة', 'ترجمة') : []",
+        "score": -2000,
+        "enabled": true
+      }
+    ],
+    "excludedStreamExpressions": [
+      {
+        "__if": "inputs.arabicHardsubs == exclude",
+        "expression": "/*AR Hardsub Exclude*/ originalLanguage != 'Arabic' ? keyword(streams, 'filename,folderName', 'arabic sub', 'arabic subs', 'arabic subbed', 'arabic subtitle', 'arabic subtitles', 'arabic hardsub', 'arabic hardsubs', 'ar sub', 'ar subs', 'arsub', 'arsubs', 'hardsub arabic', 'مترجم', 'مترجمة', 'ترجمة') : []",
+        "enabled": true
+      }
+    ],
+    "preferredStreamExpressions": [],
+    "includedStreamExpressions": [
+      {
+        "__if": "inputs.arabicOriginals",
+        "expression": "/*Arabic Originals*/ originalLanguage == 'Arabic' ? passthrough(negate(addon(streams, 'Knaben', 'Usenet', 'Usenet 2'), streams), 'title', 'year', 'digitalRelease') : []",
+        "enabled": true
+      },
+      {
+        "__if": "inputs.aradeb",
+        "expression": "/*Aradeb*/ passthrough(addon(streams, 'Aradeb'), 'filter', 'language', 'subtitle', 'limit', 'excluded', 'required', 'title', 'year', 'episode', 'digitalRelease')",
+        "enabled": true
+      }
+    ],
+    "hideErrors": true,
+    "requiredStreamTypes": [],
+    "excludedStreamTypes": {
+      "__if": "services or inputs.httpAddons == only",
+      "__value": [
+        "p2p"
+      ]
+    },
+    "includedStreamTypes": [],
+    "requiredAudioChannels": [],
+    "excludedAudioChannels": [],
+    "includedAudioChannels": [],
+    "preferredAudioChannels": [],
+    "excludedKeywords": [
+      "r00",
+      "iso"
+    ],
+    "dynamicAddonFetching": {
+      "enabled": false,
+      "condition": "((count(regexMatched(resolution(language(quality(cached(totalStreams),'Bluray REMUX','Bluray','WEB-DL'),'{{inputs.languages}}'),'2160p')))>=3 or count(regexMatched(resolution(language(quality(cached(totalStreams),'Bluray REMUX','Bluray','WEB-DL'),'Original','Dual Audio','Multi','Dubbed','Unknown'),'2160p')))>=5) and (count(regexMatched(resolution(cached(totalStreams),'2160p')))>=5 or count(regexMatched(resolution(cached(totalStreams),'1080p')))>=5)) or (count(cached(totalStreams))>=5 and totalTimeTaken>{{inputs.timeout}}) or (totalTimeTaken>{{inputs.timeout}}+3000)"
+    },
+    "groups": {
+      "enabled": false,
+      "behaviour": "parallel",
+      "addons": []
+    },
+    "preloadStreams": {
+      "enabled": true
+    },
+    "syncedExcludedStreamExpressionUrls": [
+      "https://git.tamtaro.de/ESE.json"
+    ],
+    "syncedIncludedStreamExpressionUrls": [
+      "https://git.tamtaro.de/ISE.json"
+    ],
+    "syncedPreferredStreamExpressionUrls": [
+      "https://git.tamtaro.de/PSE.json"
+    ],
+    "syncedExcludedRegexUrls": [
+      "https://git.tamtaro.de/Excluded-Regex.json"
+    ],
+    "syncedRankedRegexUrls": [
+      "https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/English/regexes.json"
+    ],
+    "syncedRankedStreamExpressionUrls": [
+      "https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/English/expressions.json"
+    ],
+    "enableSeadex": true,
+    "regexOverrides": [],
+    "showChanges": true
+  }
+}
