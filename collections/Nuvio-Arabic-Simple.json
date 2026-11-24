@@ -1,0 +1,1420 @@
+[
+  {
+    "id": "ar.simple.arabic",
+    "title": "عربي",
+    "pinToTop": true,
+    "viewMode": "FOLLOW_LAYOUT",
+    "showAllTab": false,
+    "focusGlowEnabled": true,
+    "backdropImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/nuvio-arabic-collection-pack-cover.jpg",
+    "folders": [
+      {
+        "id": "ar.simple.trending",
+        "title": "الأكثر رواجاً",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/001-featured-trending.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_trending.m62ufjs0",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_trending.ji2k7w53",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.latest",
+        "title": "أحدث الإصدارات",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/004-featured-latest-releases.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_latest_episodes_premieres.3ym4kx34",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_latest_releases.vk8yd134",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.ramadan",
+        "title": "رمضان",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/095-ramadan-series-ramadan-2026.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.ramadan_series_2026.nu8zr6t4",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.ramadan_series_2025.tq5jfdx7",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.ramadan_series_2024.uqijkgr7",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.ramadan_series_2023.jhzulrkc",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.ramadan_series_2022.d1tlvg4c",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.ramadan_series_2021.2iwfrhy6",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.ramadan_series_2020.eadyhol9",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.ramadan_series_2019.wwjap9d2",
+            "type": "series",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.popular",
+        "title": "الأكثر شعبية",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/002-featured-popular.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_popular.nn3j86l1",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_popular.x9z83qa4",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.top",
+        "title": "الأعلى تقييماً",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/003-featured-top-rated.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_top_rated.9sq5mgm2",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_top_rated.hym4ouzc",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.bestof",
+        "title": "أفضل أعمال السنة",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/068-best-of-the-year-best-of-2026.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_best_of_2026.q1fk5hda",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_best_of_2026.9nu36dma",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_best_of_2025.1s338bv9",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_best_of_2025.u823j1va",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_best_of_2024.n2qke0sb",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_best_of_2024.agn6qyp4",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_best_of_2023.1js2gzod",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_best_of_2023.zhp9zzva",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_best_of_2022.9zot67v7",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_best_of_2022.qzu52025",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.classics",
+        "title": "كلاسيكيات",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/047-decades-classics.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_movies_classics_before_2000.2tshzdr5",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_classics_before_2005.n62rvxs7",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.egyptian_cinema_1950s.oeas4732",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.egyptian_cinema_1960s.2ih9r8d7",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.egyptian_cinema_1970s.o5i558z3",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.egyptian_cinema_1980s.okihq8f9",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.egyptian_cinema_1990s.bzzqz816",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_of_the_1990s_popular.sjpmrzi0",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_series_of_the_2000s_popular.zedql3h0",
+            "type": "series",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.drama",
+        "title": "دراما",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/033-genres-drama.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_drama_series_popular.t34pkhmd",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_drama_movies_popular.k12nomzb",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_drama_series_top_rated.j5vlmzw2",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_drama_movies_top_rated.8bda15v2",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.comedy",
+        "title": "كوميديا",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/030-genres-comedy.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_comedy_series_popular.9fwpy2aa",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_comedy_movies_popular.xpeqt5x7",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_comedy_series_top_rated.e77m3dd7",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_comedy_movies_top_rated.lxm5cst4",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.action",
+        "title": "أكشن",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/027-genres-action.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_action_adventure_series_popular.cm14ygq1",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_action_movies_popular.u9ramby5",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_action_adventure_series_top_rated.nzqyn756",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_action_movies_top_rated.9bn1bvq2",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.crime",
+        "title": "جريمة",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/031-genres-crime.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_crime_series_popular.kfgh8921",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_crime_movies_popular.lsfox4q7",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_crime_series_top_rated.gc2i7fn4",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_crime_movies_top_rated.rvb4sb2b",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.romance",
+        "title": "رومانسي",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/040-genres-romance.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_romance_movies_popular.7mnsww04",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_romance_movies_top_rated.kne6it00",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.horror",
+        "title": "رعب",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/037-genres-horror.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_horror_movies_popular.pzeg1fb8",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_horror_movies_top_rated.7fjhbec5",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.family",
+        "title": "عائلي",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/034-genres-family.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_family_series.utkbazq4",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_family_movies.m18z51w3",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_family_series_popular.qa9w0ck0",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_family_movies_popular.wpy4bvd8",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.kids",
+        "title": "أطفال",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/044-genres-kids.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_animation_and_kids_series.v87i3l94",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_kids_series_popular.h7yl1awb",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_animation_movies.sgdh1vx8",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_animation_series_popular.cgvq1zy4",
+            "type": "series",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.documentary",
+        "title": "وثائقي",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/032-genres-documentary.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_documentary_series.eqvp2on1",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_documentaries.hchy47z5",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.arabic_documentary_series_popular.vvlo2hm8",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.arabic_documentary_movies_popular.rbk4ai15",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ar.simple.countries",
+    "title": "حسب البلد",
+    "pinToTop": true,
+    "viewMode": "FOLLOW_LAYOUT",
+    "showAllTab": false,
+    "focusGlowEnabled": true,
+    "backdropImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/nuvio-arabic-collection-pack-cover.jpg",
+    "folders": [
+      {
+        "id": "ar.simple.country.egyptian",
+        "title": "مصر",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/006-arab-countries-egypt.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.egyptian_series_popular.euyb9nh5",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.egyptian_movies_popular.baajyxo4",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.egyptian_series_latest.rak1n5p3",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.egyptian_movies_latest.91jbll60",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.egyptian_series_top_rated.aass7ysb",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.egyptian_movies_top_rated.pgkjuwd6",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.saudi",
+        "title": "السعودية",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/007-arab-countries-saudi-arabia.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.saudi_series_popular.asbc49j8",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.saudi_movies_popular.6t92inm5",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.saudi_series_latest.q1a8q0l7",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.saudi_movies_latest.35ac0ml2",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.saudi_series_top_rated.15ydl6sb",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.saudi_movies_top_rated.ez20nfm7",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.emirati",
+        "title": "الإمارات",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/008-arab-countries-united-arab-emirates.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.emirati_series_popular.use40na8",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.emirati_movies_popular.f893mh5d",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.emirati_series_latest.orv3p225",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.emirati_movies_latest.gk0lii57",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.emirati_series_top_rated.4mcz44w9",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.emirati_movies_top_rated.j6imqkf5",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.kuwaiti",
+        "title": "الكويت",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/009-arab-countries-kuwait.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.kuwaiti_series_popular.trn3gs13",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.kuwaiti_movies_popular.bssp5jo8",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.kuwaiti_series_latest.4zgjnc30",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.kuwaiti_movies_latest.0qp4hq21",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.kuwaiti_series_top_rated.7a1p27k1",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.kuwaiti_movies_top_rated.kj56jo6b",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.qatari",
+        "title": "قطر",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/010-arab-countries-qatar.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.qatari_series_popular.qb95q1q7",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.qatari_movies_popular.xi5g5py9",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.qatari_series_top_rated.3o6c5wo2",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.qatari_movies_top_rated.t3ml66q3",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.bahraini",
+        "title": "البحرين",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/011-arab-countries-bahrain.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.bahraini_series_popular.g6owjp0a",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.bahraini_movies_popular.gj83otpa",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.bahraini_series_top_rated.janlans9",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.bahraini_movies_top_rated.b6lkjzg1",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.omani",
+        "title": "عُمان",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/012-arab-countries-oman.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.omani_series_popular.bhxuajt2",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.omani_movies_popular.xgzxfdkb",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.omani_series_top_rated.01dnotr0",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.omani_movies_top_rated.kuud2e5b",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.iraqi",
+        "title": "العراق",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/013-arab-countries-iraq.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.iraqi_series_popular.ubt1xio1",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.iraqi_movies_popular.fyzw3ri8",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.iraqi_series_latest.fdds1mzd",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.iraqi_movies_latest.p0x18je4",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.iraqi_series_top_rated.z4ae88gc",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.iraqi_movies_top_rated.mvp02pi6",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.syrian",
+        "title": "سوريا",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/014-arab-countries-syria.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.syrian_series_popular.dxm1vpi0",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.syrian_movies_popular.pj08eqwd",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.syrian_series_latest.nr8ufk40",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.syrian_movies_latest.vmbnvoy0",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.syrian_series_top_rated.oyf89m05",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.syrian_movies_top_rated.e1b8zmha",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.lebanese",
+        "title": "لبنان",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/015-arab-countries-lebanon.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.lebanese_series_popular.wz34ba52",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.lebanese_movies_popular.ipvjbaq4",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.lebanese_series_latest.zm6ub49a",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.lebanese_movies_latest.0iexjo71",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.lebanese_series_top_rated.88bzs1o6",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.lebanese_movies_top_rated.xx8bdlm2",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.jordanian",
+        "title": "الأردن",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/016-arab-countries-jordan.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.jordanian_series_popular.5ne067x5",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.jordanian_movies_popular.61cok3od",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.jordanian_series_latest.c1dnjju0",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.jordanian_movies_latest.wqbla7j1",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.jordanian_series_top_rated.v6lv3nz5",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.jordanian_movies_top_rated.hom4bh40",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.palestinian",
+        "title": "فلسطين",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/017-arab-countries-palestine.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.palestinian_series_popular.dmpaj2p3",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.palestinian_movies_popular.hlpt2v55",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.palestinian_series_top_rated.aahh0032",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.palestinian_movies_top_rated.47ncgohd",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.yemeni",
+        "title": "اليمن",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/018-arab-countries-yemen.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.yemeni_series_popular.r27tovpd",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.yemeni_movies_popular.rsfck6f0",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.yemeni_series_top_rated.zbcvtc8d",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.yemeni_movies_top_rated.52ux34r0",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.sudanese",
+        "title": "السودان",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/019-arab-countries-sudan.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.sudanese_series_popular.jg5c0hhc",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.sudanese_movies_popular.q8aoy4d2",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.sudanese_series_top_rated.mcanm2e3",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.sudanese_movies_top_rated.at5r8ln0",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.libyan",
+        "title": "ليبيا",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/020-arab-countries-libya.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.libyan_series_popular.713vbiw9",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.libyan_movies_popular.zxvxj8r3",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.libyan_series_top_rated.bz6pc61c",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.libyan_movies_top_rated.bcvm1p3c",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.moroccan",
+        "title": "المغرب",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/021-arab-countries-morocco.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.moroccan_series_popular.vd2xzbn6",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.moroccan_movies_popular.huyytrha",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.moroccan_series_latest.s5jf5oc2",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.moroccan_movies_latest.fiwoln79",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.moroccan_series_top_rated.3jv7gfdc",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.moroccan_movies_top_rated.7rwqiwwd",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.algerian",
+        "title": "الجزائر",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/022-arab-countries-algeria.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.algerian_series_popular.a2knjc40",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.algerian_movies_popular.gecqblza",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.algerian_series_top_rated.s9o5vi35",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.algerian_movies_top_rated.qbyh4hy3",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.tunisian",
+        "title": "تونس",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/023-arab-countries-tunisia.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.tunisian_series_popular.knju4cdd",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.tunisian_movies_popular.02dqh0vd",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.tunisian_series_latest.e7tt1qfb",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.tunisian_movies_latest.mkuzygv9",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.tunisian_series_top_rated.cmqc08ja",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.tunisian_movies_top_rated.ysjo3ws1",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.turkish",
+        "title": "تركيا",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/024-world-cinema-turkey.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.turkish_series_popular.noev7nt3",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.turkish_movies_popular.xnd8sv48",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.turkish_series_top_rated.6wlw8ag0",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.turkish_movies_top_rated.oy3d98e3",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.korean",
+        "title": "كوريا الجنوبية",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/025-world-cinema-south-korea.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.korean_series_popular.s9ib5gy8",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.korean_movies_popular.ecoudhk4",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.korean_series_top_rated.2weexprc",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.korean_movies_top_rated.0g2q9kvd",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      },
+      {
+        "id": "ar.simple.country.indian",
+        "title": "الهند",
+        "coverImageUrl": "https://raw.githubusercontent.com/aliabdoxd14/nuvio-covers/main/026-world-cinema-india.jpg",
+        "focusGifEnabled": false,
+        "tileShape": "LANDSCAPE",
+        "hideTitle": true,
+        "catalogSources": [
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.indian_series_popular.b21m8jy7",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.indian_movies_popular.m2e8ljy3",
+            "type": "movie",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.series.indian_series_top_rated.2hu3wnl1",
+            "type": "series",
+            "genre": "None"
+          },
+          {
+            "addonId": "aio-metadata",
+            "catalogId": "tmdb.discover.movie.indian_movies_top_rated.izcq2nf7",
+            "type": "movie",
+            "genre": "None"
+          }
+        ]
+      }
+    ]
+  }
+]
